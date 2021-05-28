@@ -1,0 +1,80 @@
+/* Import "Bebas Neue" and "Open Sans" fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Open+Sans&display=swap');
+
+/* Simple browser reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* Make the background never repeat and be centered at all times */
+	background-image: url("./assets/img/bg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	/* Set a background colour to be displayed whilst the image is loading on slow connections */
+	background-color: #212121;
+}
+
+/* Base title styles */
+.title {
+	color: #7ed957;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 132px;
+	margin-top: 75px;
+	display: inline-block;
+}
+
+/* Home page specific styles for the title class */
+.title.home { 
+	margin-left: 1050px;
+	margin-top: 325px;
+}
+
+/* Styles for the green content box used on most pages */
+.content {
+	background-color: #7ed957;
+	color: #212121;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	padding: 20px;
+	margin-right: 50px;
+}
+
+/* Styling to make hyperlinks orange and bold */
+a {
+	color: #FF5722;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Styling to underline hyperlinks when they are hovered over */
+a:hover {
+	text-decoration: underline
+}
+
+/* Styling for the svg of the back button, displayed on all pages
+   exluding the home page */
+.back {
+	height: 125px;
+	width: auto;
+}
+
+/* Styling that will get applied to both the back button and the title
+   on every page, except from the home page. */
+.back && .title && :not(.home) {
+	display: inline-block;
+}
+
+/* Styling for the array of acts displayed on the acts page */
+.acts {
+	
+}
+
+/* Styling for each induvidual act within the acts array */
+.act {
+	
+}
