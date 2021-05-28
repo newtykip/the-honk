@@ -7,6 +7,10 @@
 
 ## Table of contents
 
+### GCSE Computer Science
+
+Here you can find a bunch of random work from my GCSE Computer Science class dumped. I can't be bothered to index it all and a lot of it is boring useless stuff, so only look here if you are incredibly bored or want to see my Python progression.
+
 ### Python
 
 - [Get PP from a beatmap ID](python/pp%20from%20beatmap%20id)

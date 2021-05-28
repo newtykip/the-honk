@@ -1,0 +1,1 @@
+print(str.upper(input('Please input a sentence.')))
