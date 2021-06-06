@@ -1,0 +1,23 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2021.06.04"]
+[Round "?"]
+[White "totallynotntb"]
+[Black "Enzinhu"]
+[Result "1-0"]
+[ECO "A46"]
+[WhiteElo "953"]
+[BlackElo "931"]
+[TimeControl "600"]
+[EndTime "15:07:16 PDT"]
+[Termination "totallynotntb won by resignation"]
+
+1. d4 d6 2. Nf3 Nf6 3. g3 Nbd7 4. Bg2 e5 5. dxe5 Nxe5 6. Nxe5 dxe5 7. Qxd8+ Kxd8
+8. Bg5 Be7 9. c4 h6 10. Bxf6 Bxf6 11. Nc3 c6 12. O-O Be6 13. b3 Kc7 14. Rad1
+Rad8 15. e4 Rxd1 16. Rxd1 Rd8 17. Ra1 g5 18. h3 g4 19. hxg4 Bxg4 20. f3 Be6 21.
+Ne2 Rd2 22. Kf1 b5 23. Ke1 Rd7 24. cxb5 cxb5 25. Nc3 a6 26. f4 exf4 27. gxf4 Rd3
+28. Ne2 Bh4+ 29. Kf1 f5 30. e5 Bd5 31. Bxd5 Rxd5 32. Ng1 Be7 33. Nh3 h5 34. Rc1+
+Kb6 35. Rc3 Rd2 36. a4 bxa4 37. bxa4 a5 38. Rc4 Bc5 39. Ke1 Rh2 40. Ng5 h4 41.
+e6 h3 42. Rxc5 Kxc5 43. e7 Rh1+ 44. Kf2 Rh2+ 45. Kf3 Re2 46. Kxe2 h2 47. e8=Q
+h1=Q 48. Qe5+ Kb4 49. Qd4+ Ka3 50. Qd6+ Kb3 51. Nf3 Kxa4 52. Ne1 Qh5+ 53. Nf3
+Qh2+ 54. Nxh2 Kb3 1-0

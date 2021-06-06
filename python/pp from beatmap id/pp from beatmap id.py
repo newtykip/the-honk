@@ -33,7 +33,6 @@ calc.set_beatmap('{0}.osu'.format(id)) # Load the newly written difficulty file
 calc.calculate() # Calculate the stats
 calc.close() # Close the calculator to save resources
 
-
 # Round beatmap stats to be readable
 stars = {
     'total': round(calc.stars, 2),
