@@ -29,3 +29,6 @@ Here you can find a bunch of random work from my GCSE Computer Science class dum
     - [9 - Good](python/pythonchallenge.com/9%20-%20Good.py)
     - [10 - Bull](python/pythonchallenge.com/10%20-%20Bull.py)
     - [11 - 5808](python/pythonchallenge.com/11%20-%205808.py)
+    - [12 - Evil](python/pythonchallenge.com/12%20-%20Evil.py)
+    - [13 - Disproportional](python/pythonchallenge.com/13%20-%20Disproportional.py)
+    - [14 - Italy](python/pythonchallenge.com/14%20-%20Italy.py)
