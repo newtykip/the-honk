@@ -38,3 +38,7 @@ Here you can find a bunch of random work from my GCSE Computer Science class dum
     - [14 - Italy](python/pythonchallenge.com/14%20-%20Italy.py)
 - [Calculators](python/calculators)
     - [Quadratic nth Term](python/calculators/quadratic%20nth%20term.py)
+    - [Binomial Distribution](python/calculators/binomial%20distribution.py)
+    - [Pearson's Product-Moment Correlation Coefficient](python/calculators/pmcc.py)
+    - [Spearman's Rank Correlation Coefficient](python/calculators/srcc.py)
+    - [Standard Deviation](python/calculators/stdev.py)
