@@ -1,2 +1,4 @@
 .idea
 venv
+ahk/emoji.ahk
+catalogue.py
