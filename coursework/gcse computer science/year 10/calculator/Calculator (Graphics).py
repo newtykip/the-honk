@@ -2,10 +2,8 @@
 # Name:        calculator v1.2 - decimal point added
 # Purpose:      calculator using TKinter
 #
-# Author:      L Jacob
 #
 # Created:     23/07/2015
-# Copyright:   (c) L Jacob 2015
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 from tkinter import *

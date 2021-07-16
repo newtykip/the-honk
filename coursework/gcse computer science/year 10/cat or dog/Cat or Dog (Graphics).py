@@ -48,7 +48,7 @@ def updateDisplay():
 pets = { 'cats': 0, 'dogs': 0, 'hamsters': 0 }
 
 window = Tk()#create the window#
-window.title("Jacob's")
+window.title("Newt's")
 # Code to add widgets will go here...
 ##Setup frames##
 topframe = Frame(window)

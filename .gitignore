@@ -1,4 +1,4 @@
 .idea
 venv
-ahk/emoji.ahk
-catalogue.py
+private
+__pycache__
