@@ -12,6 +12,7 @@
 - [Data Science](python/data%20science)
   - [Fake Jobs Scraper](python/data%20science/fakejobs.py)
   - [Country Population vs Active Facebook Users in the Country](python/data%20science/fbPercentActive.py)
+  - [ngrams Word Popularity](python/data%20science/wordPopularity.py)
 - [Calculators](python/calculators)
   - [Binomial Distribution](python/calculators/Binomial%20Distribution.py)
   - [Pearson's Product-Moment Correlation Coefficient](python/calculators/PMCC.py)
