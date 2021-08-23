@@ -19,7 +19,7 @@ number = 0
 page = getPage(number)
 lines = []
 
-file = open(os.path.dirname(os.path.realpath(__file__)) + '/2stars_res.csv', 'r+')
+file = open(os.path.dirname(os.path.realpath(__file__)) + '/2stars.csv', 'r+')
 file.truncate(0)
 
 while page != -1:
