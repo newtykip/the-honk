@@ -1,11 +1,13 @@
 import csv
+import os
 
 class Account:
     def __init__(self, csvfile):
         self.handle = csvfile[:-4]
         self.bio = ''
         self._tweets = []
-        with open(csvfile, 'r',encoding='utf-8') as file:
+        filePath = '{0}/{1}'.format(os.path.dirname(os.path.realpath(__file__)), csvfile)
+        with open(filePath, 'r',encoding='utf-8') as file:
           reader = csv.reader(file)
           first_row = 1
           for row in reader:
