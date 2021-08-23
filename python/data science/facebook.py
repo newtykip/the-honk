@@ -31,4 +31,4 @@ for td1, td2 in zip(tds[::2], tds[1::2]):
 
 # Save the data
 df = pd.DataFrame(data)
-df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/fbPercentActive_res.csv')
+df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/facebook.csv')

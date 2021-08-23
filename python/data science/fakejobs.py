@@ -27,4 +27,4 @@ for job in jobs:
 
 # Save the data
 df = pandas.DataFrame(data)
-df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/fakejobs_res.csv')
+df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/fakejobs.csv')
