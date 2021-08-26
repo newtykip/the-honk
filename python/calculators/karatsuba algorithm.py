@@ -1,24 +1,22 @@
 def karatsuba(x, y):
 	xLen = len(str(x))
 	yLen = len(str(y))
-	# handle single digit multiplication at the end of the iteration
-	# this gives the loop an end, and gives us our final results
+	# fallback to traditional multiplication
 	if xLen == 1 or yLen == 1:
 		return x * y
 	else:
-		n = max(xLen, yLen) // 2 # choose the longest length
-		# calculate a, b, c, d for the iteration
-		a = x // (10 ** n)
-		b = x % (10 ** n)
-		c = y // (10 ** n)
-		d = y % (10 ** n)
-		# run karatsuba to resolve ac and bd for the iteration
-		ac = karatsuba(a, c)
-		bd = karatsuba(b, d)
-		# use karatsuba again to resolve adbc for the iteration
-		adbc = karatsuba(a + b, c + d) - ac - bd
-		# return the solution for the digit pairs of the iteration
-		return ac * 10 ** (2 * n) + (adbc * 10 ** n) + bd
+		n = max(xLen, yLen) // 2 # choose the largest size
+		# split the digit sequences in the middle using some mathematical magic
+		low1 = x % (10 ** n)
+		low2 = y % (10 ** n)
+		high1 = x // (10 ** n)
+		high2 = y // (10 ** n)
+		# 3 recursive calls made to numbers approximately half the size
+		z0 = karatsuba(low1, low2)
+		z1 = karatsuba(low1 + high1, low2 + high2)
+		z2 = karatsuba(high1, high2)
+		# plug it into the formula
+		return (z2 * 10 ** (n * 2)) + ((z1 - z2 - z0) * (10 ** n)) + z0
 
 # helper method to easily take in our inputs
 def takeInput(text):
