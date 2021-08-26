@@ -6,13 +6,27 @@ import statistics
 import os
 import pandas
 
+def yearInput(text):
+	while True:
+		try:
+			x = int(input(text + '\n'))
+		except ValueError:
+			print('You must input an integer!\n')
+		else:
+			if x > 2019 or x < 1500:
+				print('The year inputted is out of range. It must be between 1500 and 2019!')
+			else:
+				return x
+
 pandas.options.display.float_format = '{:.10f}'.format
+
+startYear = yearInput('Please enter the start year!')
+endYear = yearInput('Please enter the end year!')
+yearSpan = '%i-%i' % (startYear, endYear)
+years = range(startYear, endYear + 1)
 
 word = input('Please enter a word to research!\n')
 print()
-startYear = 1800
-endYear = 2019
-years = range(startYear, endYear + 1)
 
 response = requests.get('https://books.google.com/ngrams/json?content=%s&year_start=%s&year_end=%s&corpus=26&smoothing=3' % (word, startYear, endYear))
 data = json.loads(response.content)[0]
@@ -39,4 +53,4 @@ graph.plot(years, points)
 graph.plot(years, m * years + b)
 graph.title(frame['word'])
 graph.ticklabel_format(style='plain')
-graph.savefig('%s/%s.png' % (os.path.dirname(os.path.realpath(__file__)), word), dpi=100)
+graph.savefig('%s/%s - %s.png' % (os.path.dirname(os.path.realpath(__file__)), word, yearSpan), dpi=100)
