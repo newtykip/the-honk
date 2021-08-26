@@ -1,3 +1,5 @@
+from _helpers import intInput
+
 def karatsuba(x, y):
 	xLen = len(str(x))
 	yLen = len(str(y))
@@ -18,25 +20,16 @@ def karatsuba(x, y):
 		# plug it into the formula
 		return (z2 * 10 ** (n * 2)) + ((z1 - z2 - z0) * (10 ** n)) + z0
 
-# helper method to easily take in our inputs
-def takeInput(text):
-	while True:
-		try:
-			x = int(input(text))
-			return x
-		except ValueError:
-			print('You must input an integer!\n')
-
-num1 = takeInput('Please enter a number (:\n')
-num2 = takeInput('Please enter a number to multiply it by!\n')
+num1 = intInput('Please enter a number (:')
+num2 = intInput('Please enter a number to multiply it by!')
 
 # Calculate the result and check if it is right
 res = num1 * num2
 karatsubaRes = karatsuba(num1, num2)
 
 print()
-print('Quadratic Result: ', res)
-print('Karatsuba Result: ', karatsubaRes)
+print('Quadratic Result:', res)
+print('Karatsuba Result:', karatsubaRes)
 
 if res == karatsubaRes:
 	print()

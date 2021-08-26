@@ -1,4 +1,5 @@
 import operator
+from _helpers import listInput
 
 def diff(a):
 	return list(map(operator.sub, a[1:], a[:-1]))
@@ -9,7 +10,7 @@ def formatNumber(x):
 	else:
 		return x	
 
-sequence = [-0.5,1,4.5,10,17.5]
+sequence = listInput('Please input a sequence of numbers')
 row1 = diff(sequence)
 row2 = diff(row1)
 

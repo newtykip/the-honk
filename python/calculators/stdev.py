@@ -1,4 +1,5 @@
 import math
+from _helpers import listInput
 
 def sd(x):
     n = len(x)
@@ -7,4 +8,9 @@ def sd(x):
 
     return math.sqrt(abs((sum(squared) / n) - (mean**2)))
 
-print(sd([135,230,132,323]))
+nums = listInput('Please input a list of numbers')
+res = sd(nums)
+
+print()
+print('The list:', nums)
+print('Standard Deviation:', res)

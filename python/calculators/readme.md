@@ -2,7 +2,7 @@
 
 Some extra information on the more complex topics (:
 
-## Karatsuba's Algorithm
+## Karatsuba Algorithm
 
 ### Useful Links
 
