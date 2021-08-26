@@ -21,17 +21,18 @@ frames = []
 
 for x in data:
 	frame = {}
+	points = x['timeseries']
 	frame['word'] = x['ngram']
-	frame['stdev'] = numpy.std(x['timeseries'])
-	frame['mean'] = numpy.mean(x['timeseries'])
-	frame['median'] = numpy.median(x['timeseries'])
-	frame['mode'] = statistics.mode(x['timeseries'])
-	frame['range'] = max(x['timeseries']) - min(x['timeseries'])
-	frame['q1'] = numpy.percentile(x['timeseries'], 25)
-	frame['q3'] = numpy.percentile(x['timeseries'], 75)
+	frame['stdev'] = numpy.std(points)
+	frame['mean'] = numpy.mean(points)
+	frame['median'] = numpy.median(points)
+	frame['mode'] = statistics.mode(points)
+	frame['range'] = max(points) - min(points)
+	frame['q1'] = numpy.percentile(points, 25)
+	frame['q3'] = numpy.percentile(points, 75)
 	frame['iqr'] = frame['q3'] - frame['q1']
 	frames.append(frame)
-	plt.plot(years, x['timeseries'], label=frame['word'])
+	plt.plot(years, points, label=frame['word'])
 
 df = pandas.DataFrame(frames)
 print(df)
