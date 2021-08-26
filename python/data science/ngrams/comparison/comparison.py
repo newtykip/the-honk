@@ -6,13 +6,27 @@ import numpy
 import os
 import pandas
 
+def yearInput(text):
+	while True:
+		try:
+			x = int(input(text + '\n'))
+		except ValueError:
+			print('You must input an integer!\n')
+		else:
+			if x > 2019 or x < 1500:
+				print('The year inputted is out of range. It must be between 1500 and 2019!')
+			else:
+				return x
+
 pandas.options.display.float_format = '{:.10f}'.format
+
+startYear = yearInput('Please enter the start year!')
+endYear = yearInput('Please enter the end year!')
+yearSpan = '%i-%i' % (startYear, endYear)
+years = range(startYear, endYear + 1)
 
 words = input('Please enter a list of words. Separate each word with a comma (:\n')
 print()
-startYear = 1800
-endYear = 2019
-years = range(startYear, endYear + 1)
 
 response = requests.get('https://books.google.com/ngrams/json?content=%s&year_start=%s&year_end=%s&corpus=26&smoothing=3' % (words, startYear, endYear))
 data = json.loads(response.content)
@@ -52,7 +66,7 @@ wordList = ', '.join([f['word'] for f in frames])
 while True:
 	toSave = input('Would you like to save this data frame in a CSV? (y/n)')
 	if toSave == 'y':
-		df.to_csv('%s/%s.csv' % (dirName, wordList))
+		df.to_csv('%s/%s - %s.csv' % (dirName, wordList, yearSpan))
 		break
 	if toSave == 'n':
 		break
@@ -63,7 +77,7 @@ while True:
 	if toSave == 'y':
 		plt.ticklabel_format(style='plain')
 		plt.legend()
-		plt.savefig('%s/%s.png' % (dirName, wordList), dpi=100)
+		plt.savefig('%s/%s - %s.png' % (dirName, wordList, yearSpan), dpi=100)
 		exit()
 	elif toSave == 'n':
 		exit()
