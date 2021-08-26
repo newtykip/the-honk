@@ -17,6 +17,7 @@
     - [Popularity](python/data%20science/ngrams/popularity/popularity.py)
 - [Calculators](python/calculators)
   - [Binomial Distribution](python/calculators/binomial%20distribution.py)
+  - [Karatsuba Algorithm](python/calculators/karatsuba%20algorithm.py)
   - [Pearson's Product-Moment Correlation Coefficient](python/calculators/pmcc.py)
   - [Quadratic nth Term](python/calculators/quadratic%20nth%20term.py)
   - [Square Root](python/calculators/sqrt.py)
