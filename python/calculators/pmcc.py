@@ -1,9 +1,10 @@
 from operator import mul
 import math
+from _helpers import listInput
 
 def pmcc(x, y):
     if len(x) != len(y):
-        raise Exception('List x must be of the same length as list y. List x is {0} values long, whereas list y is {1} values long.'.format(len(x), len(y)))
+        raise Exception('Both datasets must be the same length!')
 
     n = len(x)
     xy = list(map(mul, x, y))
@@ -16,4 +17,11 @@ def pmcc(x, y):
 
     return sxy / math.sqrt(sxx * syy)
 
-print(pmcc([1,2,3,4,5], [5,3,8,7,12]))
+a = listInput('Please input a list of numbers')
+b = listInput('Please input a second list of numbers')
+res = pmcc(a, b)
+
+print()
+print('List A:', a)
+print('List B:', b)
+print('PMCC:', res)

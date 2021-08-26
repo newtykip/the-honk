@@ -1,33 +1,32 @@
 import numpy
+from _helpers import listInput
 
 def rank(x):
-    y = x.sort()
-    print(y)
-    res = []
-    for i in x:
-        res.append(y.index(x[i]) + 1)
-    return res
+    x = numpy.array(x)
+    return x.argsort().argsort()
 
 def spearman(a, b):
     if len(a) != len(b):
-        print('Both datasets must be the same length!')
-        return undefined
+        raise Exception('Both datasets must be the same length!')
 
     n = len(a)
 
-    # rank set a
-    aranks = sorted(range(n), reverse=True, key=a.__getitem__)
-    print(aranks)
-
-    # rank set b
+    # calculate rankings
+    aranks = rank(a)
     branks = rank(b)
 
     # work out the difference between ranks
     d = aranks - branks
-    d = d**2
-    d = numpy.sum(d)
+    d = numpy.sum(d ** 2)
 
     # plug the values into the formula
-    return 1 - ((6*d) / (n**3 - n))
+    return 1 - ((6 * d) / (n ** 3 - n))
 
-print(spearman([1,2,3,5,4], [5,4,3,2,1]))
+a = listInput('Please input a list of numbers')
+b = listInput('Please input a second list of numbers')
+res = spearman(a, b)
+
+print()
+print('List A:', a)
+print('List B:', b)
+print('SRCC:', res)
