@@ -12,6 +12,7 @@
 - [Data Science](python/data%20science)
   - [Fake Jobs Scraper](python/data%20science/fakejobs.py)
   - [Country Population vs Active Facebook Users in the Country](python/data%20science/facebook.py)
+  - [Estimated Revenue for the top Twitch channels](python/data%20science/twitchsubs.py)
   - [ngrams](python/data%20science/ngrams)
     - [Comparison](python/data%20science/ngrams/comparison/comparison.py)
     - [Popularity](python/data%20science/ngrams/popularity/popularity.py)
