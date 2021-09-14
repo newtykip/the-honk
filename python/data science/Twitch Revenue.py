@@ -62,4 +62,4 @@ for i in range(howMany):
 
 df = pd.DataFrame(data, index=None)
 df.index += 1
-df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/twitchsubs.csv')
+df.to_csv(os.path.dirname(os.path.realpath(__file__)) + '/twitchrevenue.csv')

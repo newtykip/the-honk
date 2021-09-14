@@ -1,5 +1,8 @@
 from _helpers import intInput
 
+# see calculators/readme.md for more information on
+# how the karatsuba algorithm works <3
+
 def karatsuba(x, y):
 	xLen = len(str(x))
 	yLen = len(str(y))
