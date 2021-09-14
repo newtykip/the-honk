@@ -54,6 +54,7 @@
     - [Pet Planet](coursework/gcse%20computer%20science/year%209/python/web/pet%20planet)
 
 - [Year 10](coursework/gcse%20computer%20science/year%2010)
+
   - [Calculator](coursework/gcse%20computer%20science/year%2010/calculator)
   - [Cat or Dog](coursework/gcse%20computer%20science/year%2010/cat%20or%20dog)
   - [Mark Analyser](coursework/gcse%20computer%20science/year%2010/mark%20analyser)
@@ -63,3 +64,6 @@
   - [Raspberry Pie Game](coursework/gcse%20computer%20science/year%2010/raspberry%20pie%20game)
   - [API Hangman](coursework/gcse%20computer%20science/year%2010/API%20Hangman.py)
   - [Temperature Bar Chart](coursework/gcse%20computer%20science/year%2010/Temperature%20Bar%20Chart.py)
+
+- [Year 11](coursework/gcse%20computer%20science/year%2011)
+  - [Maths Quiz](coursework/gcse%20computer%20science/year%2011/Maths%20Quiz.py)
