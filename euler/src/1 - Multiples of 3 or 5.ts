@@ -1,12 +1,13 @@
 import { calcSum } from './utils';
 
-const below = 1000;
-const multiplesOf = [3, 5];
-const toAdd: Set<number> = new Set();
+const multiplesOf = (numbers: number[], upperBound: number) => {
+    const results: Set<number> = new Set();
 
-// Find all of the multiples of 3 and 5 below 1000
-for (let i = 1; i < below; i++) {
-    multiplesOf.forEach(num => (i % num == 0 ? toAdd.add(i) : null));
-}
+    for (let i = 1; i < upperBound; i++) {
+        numbers.forEach(num => (i % num == 0 ? results.add(i) : null));
+    }
 
-console.log(calcSum(Array.from(toAdd)));
+    return Array.from(results);
+};
+
+console.log(calcSum(multiplesOf([3, 5], 1000)));

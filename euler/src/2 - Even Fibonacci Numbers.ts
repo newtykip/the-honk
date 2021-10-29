@@ -1,15 +1,22 @@
 import { calcSum } from './utils';
 
-const sequence = [1, 2];
-const max = 4000000;
+const fibonacciNumbers = (upperBound: number) => {
+    const sequence = [1, 2];
 
-// Keep making new nujm
-while (sequence[sequence.length - 1] < max) {
-    const newValue = sequence[sequence.length - 1] + sequence[sequence.length - 2];
+    // Keep making new numbers in the sequence until we hit the upper bound
+    while (sequence[sequence.length - 1] < upperBound) {
+        const newValue = sequence[sequence.length - 1] + sequence[sequence.length - 2];
+        sequence.push(newValue);
+    }
 
-    sequence.push(newValue);
-}
+    return sequence;
+};
 
-// Filter out the even numbers and find the sum
-const even = sequence.filter(n => n % 2 === 0);
-console.log(calcSum(even));
+const evenFibonacciNumbers = (upperBound: number) => {
+    const sequence = fibonacciNumbers(upperBound);
+    const even = sequence.filter(n => n % 2 === 0);
+
+    return even;
+};
+
+console.log(calcSum(evenFibonacciNumbers(4000000)));
