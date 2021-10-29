@@ -1,3 +1,5 @@
+export {};
+
 const largestProduct = (number: bigint | number, adjacentDigits: number) => {
     let cursorIndex = 0;
     const selections: number[][] = [];

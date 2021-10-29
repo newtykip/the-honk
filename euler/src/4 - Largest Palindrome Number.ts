@@ -1,3 +1,5 @@
+export {};
+
 const largestPallidromeNumber = (lowerBound: number, upperBound: number) => {
     // Work out all of the products of 3 digit numbers
     const products: number[] = [];

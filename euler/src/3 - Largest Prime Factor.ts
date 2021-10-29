@@ -1,3 +1,5 @@
+export {};
+
 const largestPrimeFactor = (number: number) => {
     let i = 2;
 

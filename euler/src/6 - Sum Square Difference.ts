@@ -1,4 +1,6 @@
-import { calcSum } from './utils';
+export {};
+
+const calcSum = (numbers: number[]) => numbers.reduce((a, b) => a + b);
 
 const sumOfSquares = (lowerBound: number, upperBound: number) => {
     // Calculate the square number of all the numbers between the bounds
