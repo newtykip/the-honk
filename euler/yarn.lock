@@ -926,6 +926,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"execution-time@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "execution-time@npm:1.4.1"
+  dependencies:
+    pretty-hrtime: ^1.0.3
+  checksum: 0a5ef5604fc1ed9f626126443dfb52cd94926a657384433a3737e7878e1697e9b37e04e63a22e2ae2f6ac6bd20261f58fb8c890388f6d3fdf906425fca98be3d
+  languageName: node
+  linkType: hard
+
 "expand-brackets@npm:^2.1.4":
   version: 2.1.4
   resolution: "expand-brackets@npm:2.1.4"
@@ -2627,7 +2636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-hrtime@npm:^1.0.0":
+"pretty-hrtime@npm:^1.0.0, pretty-hrtime@npm:^1.0.3":
   version: 1.0.3
   resolution: "pretty-hrtime@npm:1.0.3"
   checksum: bae0e6832fe13c3de43d1a3d43df52bf6090499d74dc65a17f5552cb1a94f1f8019a23284ddf988c3c408a09678d743901e1d8f5b7a71bec31eeeac445bef371
@@ -2647,6 +2656,7 @@ __metadata:
   dependencies:
     "@types/node": ^16.11.6
     chalk: ^4.1.2
+    execution-time: ^1.4.1
     gulp: ^4.0.2
     gulp-cli: ^2.3.0
     gulp-rename: ^2.0.0

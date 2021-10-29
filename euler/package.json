@@ -8,6 +8,7 @@
     "devDependencies": {
         "@types/node": "^16.11.6",
         "chalk": "^4.1.2",
+        "execution-time": "^1.4.1",
         "gulp": "^4.0.2",
         "gulp-cli": "^2.3.0",
         "gulp-rename": "^2.0.0",

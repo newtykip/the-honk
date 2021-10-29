@@ -1,9 +1,12 @@
-let number = 600851475143;
-let i = 2;
+const largestPrimeFactor = (number: number) => {
+    let i = 2;
 
-while (i * i <= number) {
-    if (number % i) i += 1;
-    else number = Math.floor(number / i);
-}
+    while (i * i <= number) {
+        if (number % i) i += 1;
+        else number = Math.floor(number / i);
+    }
 
-console.log(number);
+    return number;
+};
+
+console.log(largestPrimeFactor(600851475143));

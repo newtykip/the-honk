@@ -1,6 +1,7 @@
 const fs = require('fs');
 const chalk = require('chalk');
 const { spawnSync } = require('child_process');
+const perf = require('execution-time')();
 
 const run = (file, puzzleName) => {
     // Calculate the length of the divider for the puzzle
@@ -10,12 +11,19 @@ const run = (file, puzzleName) => {
         divider += '-';
     }
 
-    // Log output
+    // Styling
     console.log(divider);
     console.log(chalk.bold(chalk.greenBright(puzzleName)));
     console.log(divider);
 
+    // Execute the file
+    perf.start();
     spawnSync('node', [`build/${file}`], { shell: true, stdio: 'inherit' });
+    const results = perf.stop();
+
+    // Print time results
+    console.log();
+    console.log(chalk.bold(chalk.yellow(`Executed in ${results.words}`)));
 };
 
 // Get files
