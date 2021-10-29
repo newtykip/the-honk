@@ -1,4 +1,6 @@
-import { calcSum } from './utils';
+export {};
+
+const calcSum = (numbers: number[]) => numbers.reduce((a, b) => a + b);
 
 const multiplesOf = (numbers: number[], upperBound: number) => {
     const results: Set<number> = new Set();

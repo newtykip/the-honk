@@ -1,3 +1,5 @@
+export {};
+
 // a + b + c = 1000
 // we need a * b * c
 // pythagorean triplet: a < b < c

@@ -13,7 +13,7 @@ gulp.task('build', () => {
         .pipe(
             rename(path => {
                 if (path.basename === 'utils') return;
-                path.basename = path.basename.substr(0, 1);
+                path.basename = path.basename.split('-')[0].trim();
             })
         )
         .pipe(gulp.dest('build'));

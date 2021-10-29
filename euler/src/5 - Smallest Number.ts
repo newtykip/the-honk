@@ -1,3 +1,5 @@
+export {};
+
 /**
  * Is x disible to n?
  */

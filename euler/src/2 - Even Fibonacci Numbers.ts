@@ -1,4 +1,6 @@
-import { calcSum } from './utils';
+export {};
+
+const calcSum = (numbers: number[]) => numbers.reduce((a, b) => a + b);
 
 const fibonacciNumbers = (upperBound: number) => {
     const sequence = [1, 2];
