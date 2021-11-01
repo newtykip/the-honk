@@ -12,7 +12,6 @@ gulp.task('build', () => {
         .pipe(uglify({ mangle: { toplevel: true } }))
         .pipe(
             rename(path => {
-                if (path.basename === 'utils') return;
                 path.basename = path.basename.split('-')[0].trim();
             })
         )

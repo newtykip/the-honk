@@ -1,6 +1,5 @@
 {
     "name": "project-euler",
-    "packageManager": "yarn@3.1.0",
     "scripts": {
         "build": "gulp build",
         "start": "node run"
