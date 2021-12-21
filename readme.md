@@ -7,8 +7,9 @@
 
 ### Table of contents
 
--   [Python](python)
--   [C](c)
+-   [Python](languages/python)
+-   [C](languages/c)
+-   [Java](languages/java)
 -   [Project Euler](euler)
 -   [GCSE Computer Science](school/gcse)
 -   [Royal Institute Computer Science Masterclass 2021](school/royal%20institute)
