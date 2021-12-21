@@ -7,6 +7,9 @@
 
 ### Table of contents
 
-- [Python](python)
-- [GCSE Computer Science](gcse%20computer%20science)
-- [Royal Institute Computer Science Masterclass 2021](royal%20institute%20computer%20science%20masterclass%202021)
+-   [Python](python)
+-   [C](c)
+-   [Project Euler](euler)
+-   [GCSE Computer Science](school/gcse)
+-   [Royal Institute Computer Science Masterclass 2021](school/royal%20institute)
+-   [r/dailyprogrammer](daily-programmer)
