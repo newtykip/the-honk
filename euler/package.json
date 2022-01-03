@@ -2,7 +2,7 @@
     "name": "project-euler",
     "scripts": {
         "build": "gulp build",
-        "start": "node run"
+        "start": "node run.js"
     },
     "devDependencies": {
         "@types/node": "^16.11.6",
