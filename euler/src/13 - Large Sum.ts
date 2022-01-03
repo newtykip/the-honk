@@ -1,7 +1,8 @@
 export {};
 
 const calcSum = (numbers: number[]) => numbers.reduce((a, b) => a + b);
-const firstXDigits = (number: number, x: number) => BigInt(number).toString().substr(0, x);
+const firstXDigits = (number: number, x: number) =>
+    parseInt(BigInt(number).toString().substr(0, x));
 
 console.log(
     firstXDigits(
