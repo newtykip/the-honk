@@ -1,3 +1,13 @@
 {
-    "java.project.sourcePaths": ["java"]
+    "java.project.sourcePaths": ["java"],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "euler/node_modules": true,
+        "euler/python_archive": true
+    }
 }
