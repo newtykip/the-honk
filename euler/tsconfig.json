@@ -3,8 +3,11 @@
         "target": "es5",
         "module": "commonjs",
         "outDir": "build",
-        "downlevelIteration": true
+        "skipLibCheck": true
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules"]
+    "files": ["src/**/*.ts"],
+    "ts-node": {
+        "transpileOnly": true,
+        "transpiler": "ts-node/transpilers/swc-experimental"
+    }
 }
