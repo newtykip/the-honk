@@ -1,3 +1,4 @@
+// See https://github.com/newtykins/the-honk/tree/main/euler/thoughts/10%20-Summation%20of%29primes.md
 export {};
 
 const calcSum = (numbers: number[]) => numbers.reduce((a, b) => a + b);

@@ -1,3 +1,4 @@
+// See https://github.com/newtykins/the-honk/tree/main/euler/thoughts/9%20-Special%20Pythagorean%29triplet.md
 export {};
 
 const pythagoreanTriplet = (sum: number) => {
