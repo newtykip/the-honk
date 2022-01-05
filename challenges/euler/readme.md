@@ -27,7 +27,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [14 - Longest Collatz sequence](src/14%20-%20Longest%20Collatz%20sequence.ts)
 -   [x] [15 - Lattice paths](src/15%20-%20Lattice%20paths.ts)
     -   [Thoughts](thoughts/15%20-%20Lattice%20paths.md)
--   [ ] 16 - Power digit sum
+-   [x] [16 - Power digit sum](src/16%20-%20Power%20digit%20sum.ts)
 -   [ ] 17 - Number letter counts
 -   [ ] 18 - Maximum path sum I
 -   [ ] 19 - Counting Sundays
