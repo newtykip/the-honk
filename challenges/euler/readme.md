@@ -28,7 +28,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [15 - Lattice paths](src/15%20-%20Lattice%20paths.ts)
     -   [Thoughts](thoughts/15%20-%20Lattice%20paths.md)
 -   [x] [16 - Power digit sum](src/16%20-%20Power%20digit%20sum.ts)
--   [ ] 17 - Number letter counts
+-   [x] [17 - Number letter counts](src/17%20-%20Number%20letter%20counts.ts)
 -   [ ] 18 - Maximum path sum I
 -   [ ] 19 - Counting Sundays
 -   [ ] 20 - Factorial digit sum
