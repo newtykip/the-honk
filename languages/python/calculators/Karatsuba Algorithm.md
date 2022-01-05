@@ -1,7 +1,7 @@
 ### Useful Links
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
-- [An amazing video on the topic](https://youtu.be/cCKOl5li6YM)
+-   [Wikipedia](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+-   [An amazing video on the topic](https://youtu.be/cCKOl5li6YM)
 
 ### The Pseudocode
 

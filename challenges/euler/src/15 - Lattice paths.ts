@@ -1,4 +1,4 @@
-// See https://github.com/newtykins/the-honk/tree/main/euler/thoughts/15%20-Lattice%20Paths.md
+// See https://github.com/newtykins/the-honk/tree/main/euler/thoughts/15%20-Lattice%20paths.md
 export {};
 
 const factorial = (n: number) => {
