@@ -3,7 +3,8 @@
     "scripts": {
         "build": "gulp build",
         "start": "node scripts/run",
-        "new": "node scripts/generate"
+        "new": "node scripts/generate",
+        "generate": "node scripts/generate"
     },
     "devDependencies": {
         "@swc/core": "^1.2.125",

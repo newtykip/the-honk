@@ -1,18 +1,16 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const { src, thoughts: thoughtsDir } = require('../constants');
+const { root, src, thoughts: thoughtsDir } = require('../constants');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const problems = fs
-    .readFileSync(path.join(__dirname, '..', 'readme.md'))
-    .toString()
-    .match(/^-   \[.] (?:\[(.*)\]|(.*))/gm)
-    .map(res => {
-        const sanitised = res.substring(8).replace('[', '').replace(']', '');
-        return sanitised.match(/[0-9]* - (.*)/)[1];
-    });
+const readmeContent = fs.readFileSync(path.join(root, 'readme.md')).toString();
+
+const problems = readmeContent.match(/^-   \[.] (?:\[(.*)\]|(.*))/gm).map(res => {
+    const sanitised = res.substring(8).replace('[', '').replace(']', '');
+    return sanitised.match(/[0-9]* - (.*)/)[1];
+});
 
 inquirer
     .prompt([
@@ -20,10 +18,21 @@ inquirer
             name: 'problemNumber',
             message: 'Which problem would you like to solve?',
             type: 'number',
-            validate: input =>
-                parseInt(input) > 100
-                    ? 'Please make sure you choose a number between 1 and 100!'
-                    : true
+            validate: input => {
+                input = parseInt(input);
+
+                if (input > 100) return 'Please make sure you choose a number between 1 and 100!';
+                else {
+                    let alreadyGenerated = false;
+                    fs.readdirSync(src).forEach(file => {
+                        if (file.startsWith(input)) alreadyGenerated = true;
+                    });
+
+                    if (alreadyGenerated)
+                        return 'Please choose a problem you have not already completed!';
+                    else return true;
+                }
+            }
         },
         {
             name: 'thoughts',
@@ -32,7 +41,7 @@ inquirer
             default: false
         }
     ])
-    .then(async ({ problemNumber, thoughts }) => {
+    .then(({ problemNumber, thoughts }) => {
         const fileName = `${problemNumber} - ${problems[problemNumber - 1]}`;
 
         // Fetch the problem data off of projecteuler.net
@@ -45,15 +54,32 @@ inquirer
                 .map(r => `// ${r}`)
                 .join('\n');
 
+            // Generate the source file
             fs.writeFileSync(
                 path.join(src, `${fileName}.ts`),
                 `${problemContent}
-export = {};
+            export = {};
 
-// Output
-console.log();`
+            // Output
+            console.log();`
             );
 
+            // Generate the thoughts file
             if (thoughts) fs.writeFileSync(path.join(thoughtsDir, `${fileName}.md`), '');
+
+            // Check it off in the readme
+            const regex = new RegExp(`   \\[.\\] ${problemNumber} - .*`);
+            const match = readmeContent.match(regex);
+
+            let newLine = `   [x] [${match[0].replace('[ ]', '').trim()}](src/${encodeURIComponent(
+                fileName
+            )}.ts)`;
+
+            if (thoughts)
+                newLine += `\n    -   [Thoughts](thoughts/${encodeURIComponent(fileName)}.md)`;
+
+            const newContent = readmeContent.replace(regex, newLine);
+
+            fs.writeFileSync(path.join(root, 'readme.md'), newContent);
         });
     });
