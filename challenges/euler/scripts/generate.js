@@ -58,10 +58,10 @@ inquirer
             fs.writeFileSync(
                 path.join(src, `${fileName}.ts`),
                 `${problemContent}
-            export = {};
+export = {};
 
-            // Output
-            console.log();`
+// Output
+console.log();`
             );
 
             // Generate the thoughts file
