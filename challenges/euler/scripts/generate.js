@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-const { src } = require('../constants');
+const { src, thoughts: thoughtsDir } = require('../constants');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
@@ -24,10 +24,16 @@ inquirer
                 parseInt(input) > 100
                     ? 'Please make sure you choose a number between 1 and 100!'
                     : true
+        },
+        {
+            name: 'thoughts',
+            message: 'Should I generate a thoughts document for you?',
+            type: 'confirm',
+            default: false
         }
     ])
-    .then(async ({ problemNumber }) => {
-        const problemName = problems[problemNumber - 1];
+    .then(async ({ problemNumber, thoughts }) => {
+        const fileName = `${problemNumber} - ${problems[problemNumber - 1]}`;
 
         // Fetch the problem data off of projecteuler.net
         axios.get(`https://projecteuler.net/problem=${problemNumber}`).then(({ data }) => {
@@ -40,12 +46,14 @@ inquirer
                 .join('\n');
 
             fs.writeFileSync(
-                path.join(src, `${problemNumber} - ${problemName}.ts`),
+                path.join(src, `${fileName}.ts`),
                 `${problemContent}
 export = {};
 
 // Output
 console.log();`
             );
+
+            if (thoughts) fs.writeFileSync(path.join(thoughtsDir, `${fileName}.md`), '');
         });
     });
