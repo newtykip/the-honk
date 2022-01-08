@@ -1,6 +1,13 @@
-// See https://github.com/newtykins/the-honk/tree/main/euler/thoughts/9%20-Special%20Pythagorean%29triplet.md
+// A Pythagorean triplet is a set of three natural numbers, a < b < c, for which a^2 + b^2 = c^2
+// For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2
+// There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+// Find the product abc.
 export {};
 
+/**
+ * Find a Pythagorean triplet based on its sum
+ * @see // See https://github.com/newtykins/the-honk/tree/main/projects/euler/thoughts/9%20-Special%20Pythagorean%29triplet.md
+ */
 const pythagoreanTriplet = (sum: number) => {
     let a: number,
         b = 1,
@@ -18,6 +25,6 @@ const pythagoreanTriplet = (sum: number) => {
     return { a, b, c };
 };
 
+// Output
 const triplet = pythagoreanTriplet(1000);
-console.log(triplet);
 console.log(triplet.a * triplet.b * triplet.c);
