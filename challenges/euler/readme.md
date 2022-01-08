@@ -31,7 +31,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [17 - Number letter counts](src/17%20-%20Number%20letter%20counts.ts)
 -   [x] [18 - Maximum path sum I](src/18%20-%20Maximum%20path%20sum%20I.ts)
 -   [x] [19 - Counting Sundays](src/19%20-%20Counting%20Sundays.ts)
--   [ ] 20 - Factorial digit sum
+-   [x] [20 - Factorial digit sum](src/20%20-%20Factorial%20digit%20sum.ts)
 -   [ ] 21 - Amicable numbers
 -   [ ] 22 - Names scores
 -   [ ] 23 - Non-abundant sums
