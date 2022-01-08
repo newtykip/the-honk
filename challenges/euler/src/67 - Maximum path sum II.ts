@@ -8,7 +8,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { resources } from '../constants';
+import { resources } from '../constants.js';
 export {};
 
 // Same method as 18 - Maximum path sum I
