@@ -3,9 +3,9 @@
         "target": "es5",
         "module": "commonjs",
         "outDir": "build",
-        "skipLibCheck": true
+        "esModuleInterop": true
     },
-    "files": ["src/**/*.ts"],
+    "include": ["src/**/*.ts"],
     "ts-node": {
         "transpileOnly": true,
         "transpiler": "ts-node/transpilers/swc-experimental"

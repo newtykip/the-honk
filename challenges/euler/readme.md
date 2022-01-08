@@ -29,7 +29,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
     -   [Thoughts](thoughts/15%20-%20Lattice%20paths.md)
 -   [x] [16 - Power digit sum](src/16%20-%20Power%20digit%20sum.ts)
 -   [x] [17 - Number letter counts](src/17%20-%20Number%20letter%20counts.ts)
--   [ ] 18 - Maximum path sum I
+-   [x] [18 - Maximum path sum I](src/18%20-%20Maximum%20path%20sum%20I.ts)
 -   [ ] 19 - Counting Sundays
 -   [ ] 20 - Factorial digit sum
 -   [ ] 21 - Amicable numbers
@@ -78,7 +78,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [ ] 64 - Odd period square roots
 -   [ ] 65 - Convergents of e
 -   [ ] 66 - Diophantine equation
--   [ ] 67 - Maximum path sum II
+-   [x] [67 - Maximum path sum II](src/67%20-%20Maximum%20path%20sum%20II.ts)
 -   [ ] 68 - Magic 5-gon ring
 -   [ ] 69 - Totient maximum
 -   [ ] 70 - Totient permutation
