@@ -3,8 +3,6 @@ const chalk = require('chalk');
 const { spawnSync } = require('child_process');
 const perf = require('execution-time')();
 
-// todo: move to ts-node
-
 const generateBanner = text => {
     // Calculate the length of the divider
     let divider = '--';
