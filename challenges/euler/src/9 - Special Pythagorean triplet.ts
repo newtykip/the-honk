@@ -6,7 +6,7 @@ export {};
 
 /**
  * Find a Pythagorean triplet based on its sum
- * @see // See https://github.com/newtykins/the-honk/tree/main/projects/euler/thoughts/9%20-Special%20Pythagorean%29triplet.md
+ * @see https://github.com/newtykins/the-honk/tree/main/challenges/euler/thoughts/9%20-%20Special%20Pythagorean%29triplet.md
  */
 const pythagoreanTriplet = (sum: number) => {
     let a: number,
