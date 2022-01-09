@@ -4,7 +4,7 @@ export {};
 
 /**
  * Use the Sieve of Eratosthenes to find the sum of primes up until a limit.
- * @see https://github.com/newtykins/the-honk/tree/main/projects/euler/thoughts/10%20-Summation%20of%29primes.md
+ * @see https://github.com/newtykins/the-honk/tree/main/challenges/euler/thoughts/10%20-%20Summation%20of%29primes.md
  */
 const sumOfPrimes = (limit: number) => {
     let array: boolean[] = [];

@@ -13,7 +13,7 @@ const factorial = (n: number) => {
 
 /**
  * Count the lattice paths using the formula shown in the thoughts document.
- * @see https://github.com/newtykins/the-honk/tree/main/projects/euler/thoughts/15%20-Lattice%20paths.md
+ * @see https://github.com/newtykins/the-honk/tree/main/challenges/euler/thoughts/15%20-%20Lattice%20paths.md
  */
 const countLatticePaths = (width: number, height: number) => {
     return factorial(width + height) / (factorial(width) * factorial(height));
