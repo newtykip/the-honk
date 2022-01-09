@@ -5,6 +5,9 @@ const { root, src, thoughts: thoughtsDir } = require('../constants');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
+process.argv.shift();
+process.argv.shift();
+
 const readmeContent = fs.readFileSync(path.join(root, 'readme.md')).toString();
 
 const problems = readmeContent.match(/^-   \[.] (?:\[(.*)\]|(.*))/gm).map(res => {
@@ -12,28 +15,33 @@ const problems = readmeContent.match(/^-   \[.] (?:\[(.*)\]|(.*))/gm).map(res =>
     return sanitised.match(/[0-9]* - (.*)/)[1];
 });
 
+const questions = [];
+
+if (isNaN(process.argv[0]))
+    questions.push({
+        name: 'problemNumber',
+        message: 'Which problem would you like to solve?',
+        type: 'number',
+        validate: input => {
+            input = parseInt(input);
+
+            if (input > 100) return 'Please make sure you choose a number between 1 and 100!';
+            else {
+                let alreadyGenerated = false;
+                fs.readdirSync(src).forEach(file => {
+                    if (file.startsWith(input)) alreadyGenerated = true;
+                });
+
+                if (alreadyGenerated)
+                    return 'Please choose a problem you have not already completed!';
+                else return true;
+            }
+        }
+    });
+
 inquirer
     .prompt([
-        {
-            name: 'problemNumber',
-            message: 'Which problem would you like to solve?',
-            type: 'number',
-            validate: input => {
-                input = parseInt(input);
-
-                if (input > 100) return 'Please make sure you choose a number between 1 and 100!';
-                else {
-                    let alreadyGenerated = false;
-                    fs.readdirSync(src).forEach(file => {
-                        if (file.startsWith(input)) alreadyGenerated = true;
-                    });
-
-                    if (alreadyGenerated)
-                        return 'Please choose a problem you have not already completed!';
-                    else return true;
-                }
-            }
-        },
+        ...questions,
         {
             name: 'thoughts',
             message: 'Should I generate a thoughts document for you?',
@@ -42,6 +50,7 @@ inquirer
         }
     ])
     .then(({ problemNumber, thoughts }) => {
+        if (!problemNumber) problemNumber = parseInt(process.argv[0]);
         const fileName = `${problemNumber} - ${problems[problemNumber - 1]}`;
 
         // Fetch the problem data off of projecteuler.net
