@@ -4,3 +4,4 @@ private
 __pycache__
 *.out
 node_modules
+*.csv

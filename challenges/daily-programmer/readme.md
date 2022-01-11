@@ -1,5 +1,5 @@
 <div align="center">
-    <img height="256" src="../../assets/dailyprogrammer.gif" alt="">
+    <img height="256" src="../../assets/daily-programmer.gif" alt="">
     <h1>r/dailyprogrammer</h1>
 </div>
 

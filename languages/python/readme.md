@@ -15,16 +15,16 @@
 ### Calculators
 
 -   [Binomial Distribution](calculators/Binomial%20Distribution.py)
+-   [Binomial Expansion](calculators/Binomial%20Expansion.py)
 -   [Karatsuba Algorithm](calculators/Karatsuba%20Algorithm.py)
 -   [Pearson's Product-Moment Correlation Coefficient](calculators/PMCC.py)
--   [Quadratic nth Term](calculators/Quadratic%20nth%20Term.py)
--   [Square Root](calculators/SQRT.py)
+-   [Babylonian Square Root](calculators/Babylonian%20%Sqaure%20Root.py)
 -   [Spearman's Rank Correlation Coefficient](calculators/SRCC.py)
--   [Standard Deviation](calculators/STDEV.py)
+-   [Trigometric Functions](calculators/Trigometric%20Functions.py)
+-   [Pascal's Triangle](calculators/Pascal's%20Triangle.py)
 
 ### Other
 
--   [PP Calculator](pp.py)
 -   [2 Stars List](gd-two-star-list)
 -   [Pong (made with Pygame)](pong)
 -   [pythonchallenge.com](pythonchallenge.com)

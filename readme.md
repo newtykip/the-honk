@@ -8,8 +8,6 @@
 ### Table of contents
 
 -   [Python](languages/python)
--   [C](languages/c)
--   [Java](languages/java)
 -   [Project Euler](challenges/euler)
 -   [r/dailyprogrammer](challenges/daily-programmer)
 -   [GCSE Computer Science](school/gcse)

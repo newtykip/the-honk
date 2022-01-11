@@ -1,3 +1,5 @@
+<div align="center">
+
 ### Sieve of Eratosthenes Psuedocode
 
 [Source](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes#Pseudocode)
@@ -17,3 +19,5 @@ algorithm Sieve of Eratosthenes is
 
     return all i such that A[i] is true.
 ```
+
+</div>

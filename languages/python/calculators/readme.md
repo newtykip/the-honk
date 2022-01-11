@@ -1,15 +1,22 @@
-# calculators
+<div align="center">
 
-Some extra information on the more complex topics (:
+### Babylonian Square Root
 
-## Karatsuba Algorithm
+<img src="https://latex.codecogs.com/svg.image?\dpi{100}%20\%20x_0%20\approx%20\sqrt{S}%20\\x_{n%20+%201}%20=%20\frac{x_n%20+%20\frac{S}{x_n}}{2}%20\\\sqrt{S}%20=%20\displaystyle%20\lim_{n%20\to%20\infty}x_n" height="250" />
 
-### Useful Links
+#### LaTeX
 
--   [Wikipedia](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
--   [An amazing video on the topic](https://youtu.be/cCKOl5li6YM)
+```
+x_0 \approx \sqrt{S} \\
+x_{n + 1} = \frac{x_n + \frac{S}{x_n}}{2} \\
+\sqrt{S} = \displaystyle \lim_{n \to \infty}x_n
+```
 
-### The Pseudocode
+### Karatsuba Algorithm
+
+[Wikipedia](https://en.wikipedia.org/wiki/Karatsuba_algorithm)
+
+[An amazing video on the topic](https://youtu.be/cCKOl5li6YM)
 
 ```
 function karatsuba (num1, num2)
@@ -32,3 +39,5 @@ function karatsuba (num1, num2)
 
     return (z2 × 10 ^ (m2 × 2)) + ((z1 - z2 - z0) × 10 ^ m2) + z0
 ```
+
+</div>

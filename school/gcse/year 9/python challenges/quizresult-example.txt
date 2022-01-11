@@ -1,2 +1,0 @@
-Name: test
-Quiz result: 1/3
