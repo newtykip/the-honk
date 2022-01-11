@@ -1,5 +1,6 @@
 {
     "name": "project-euler",
+    "private": true,
     "scripts": {
         "build": "gulp build",
         "start": "node scripts/run",

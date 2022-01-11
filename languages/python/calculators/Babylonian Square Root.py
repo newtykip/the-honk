@@ -5,11 +5,11 @@ Created as a part of my Royal Institute masterclass
 
 from _helpers import intInput
 
-def sqrt(x):
-	a = 2
-	while abs((a - (x / a))) > 1:
-		a = (a + (x / a)) / 2
-	return int(a)
+def sqrt(number):
+	initialGuess = 2
+	while abs(initialGuess - (number / initialGuess)) > 1:
+		initialGuess = (initialGuess + (number / initialGuess)) / 2
+	return int(initialGuess)
 
 num = intInput('Please input a number! (:')
 res = sqrt(num)

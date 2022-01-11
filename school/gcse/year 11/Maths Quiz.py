@@ -39,7 +39,7 @@ def generateQuestion():
 
 '''Generates a fake answer based on the real answer.'''
 def generateFakeAnswer(answer):
-    r = random.randint(-10, 10)
+    r = random.randint(-11, 11)
     return answer + r
 
 '''Asks a question.'''
@@ -57,13 +57,13 @@ def askQuestion():
         else:
             while True:
                 generated = generateFakeAnswer(answer)
-                if generated != answer:
+                if generated != answer and generated not in answerList:
                     answerList[i] = generated
                     break
 
     # Format that list of potential fake answers into a string
     answers = ''
-    
+
     for key in answerList:
         value = answerList.get(key)
         answers += '\n%i) %s' % (key, formatNumber(value))
