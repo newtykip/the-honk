@@ -12,7 +12,7 @@ int sqrt(int number) {
 }
 
 int main() {
-	cout << "Type a number to predict the square root of:";
+	cout << "Type a number to predict the square root of: ";
 
 	int number;
 	cin >> number;

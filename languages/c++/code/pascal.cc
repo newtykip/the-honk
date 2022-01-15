@@ -3,12 +3,12 @@
 using namespace std;
 
 // Calculate Pascal's triangle
-vector<vector<int>> pascal(int rowCount) {
-	vector<vector<int>> rows{{1}};
+vector<vector<long long>> pascal(int rowCount) {
+	vector<vector<long long>> rows{{1}};
 	
 	for (int i = 0; i < rowCount; i++) {
-		vector<int> previousRow = rows[rows.size() - 1];
-		vector<int> newRow{1};
+		vector<long long> previousRow = rows[rows.size() - 1];
+		vector<long long> newRow{1};
 
 		for (int j = 0; j < previousRow.size() - 1; j++) {
 			newRow.push_back(previousRow[j] + previousRow[j + 1]);
@@ -21,7 +21,8 @@ vector<vector<int>> pascal(int rowCount) {
 	return rows;
 }
 
-int vectorStringLength(vector<int> vector) {
+// Find the length of a vector if it were outputted as a string with a space between each value
+int vectorStringLength(vector<long long> vector) {
 	int value = vector.size();
 
 	for (int i = 0; i < vector.size(); i++) {
@@ -31,15 +32,18 @@ int vectorStringLength(vector<int> vector) {
 	return value;
 }
 
-int main() {
-	vector<vector<int>> pascalsTriangle = pascal(10);
+// Draw Pascal's Triangle
+void drawPascalTriangle(int rowCount) {
+	vector<vector<long long>> pascalsTriangle = pascal(rowCount);
 	int bottomRowSize = vectorStringLength(pascalsTriangle[pascalsTriangle.size() - 1]);
 
-	// Output the triangle
-	for (int i = 0; i < pascalsTriangle.size(); i++) {
-		vector<int> currentRow = pascalsTriangle[i];
+	for (int i = 0; i < pascalsTriangle.size() - 1; i++) {
+		vector<long long> currentRow = pascalsTriangle[i];
+
 		int rowSize = vectorStringLength(currentRow);
+
 		int sizeDifference = bottomRowSize - rowSize;
+
 		string spacing = "";
 
 		for (int j = 0; j < sizeDifference / 2; j++) {
@@ -62,4 +66,13 @@ int main() {
 			cout << endl;
 		}
 	}
+}
+
+int main() {
+	cout << "How many rows of Pascal's Triangle would you like to calculate? ";
+
+	int rowCount;
+	cin >> rowCount;
+
+	drawPascalTriangle(rowCount);
 }
