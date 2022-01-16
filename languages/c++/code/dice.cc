@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
 class Dice {
 	private:
@@ -23,8 +22,8 @@ class Dice {
 		}
 
 		// Roll the dice many times and return thre result in a vector
-		vector<int> rollMany(int times) {
-			vector<int> rolls{};
+		std::vector<int> rollMany(int times) {
+			std::vector<int> rolls{};
 
 			for (int i = 0; i < times; i++) {
 				int rolled = roll();
@@ -36,14 +35,14 @@ class Dice {
 };
 
 // Print a vector of integers onto one line
-void printResults(vector<int> data) {
+void printResults(std::vector<int> data) {
 	int length = data.size();
 
 	for (int i = 0; i < length; i++) {
-		string out = to_string(data[i]);
+		std::string out = std::to_string(data[i]);
 		if (i != length - 1) out += ", ";
 
-		cout << out;
+		std::cout << out;
 	}
 }
 
@@ -56,12 +55,12 @@ int main() {
 	Dice twenty(20);
 
 	// Roll them
-	vector<int> sixRolled = six.rollMany(10);
-	vector<int> twentyRolled = twenty.rollMany(10);
+	std::vector<int> sixRolled = six.rollMany(10);
+	std::vector<int> twentyRolled = twenty.rollMany(10);
 
 	// Display their outputs
-	cout << "Six Sided Dice:" << endl;
+	std::cout << "Six Sided Dice:\n";
 	printResults(sixRolled);
-	cout << endl << endl << "Twenty Sided Dice:" << endl;
+	std::cout << "\n\nTwenty Sided Dice:\n";
 	printResults(twentyRolled);
 }

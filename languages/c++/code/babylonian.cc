@@ -1,5 +1,4 @@
 #include <iostream>
-using namespace std;
 
 int sqrt(int number) {
 	int initialGuess = 2;
@@ -12,10 +11,10 @@ int sqrt(int number) {
 }
 
 int main() {
-	cout << "Type a number to predict the square root of: ";
+	std::cout << "Type a number to predict the square root of: ";
 
 	int number;
-	cin >> number;
+	std::cin >> number;
 
-	cout << sqrt(number);
+	std::cout << sqrt(number);
 }
