@@ -12,5 +12,17 @@
         "challenges/euler/build": true,
         "commitlint.config.js": true,
         "**/pnpm-lock.yaml": true
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.tcc": "cpp",
+        "complex": "cpp",
+        "fstream": "cpp",
+        "cmath": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "string_view": "cpp",
+        "vector": "cpp"
     }
 }
