@@ -1,6 +1,11 @@
 #include <iostream>
 #include <math.h>
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
+
+typedef high_resolution_clock Clock;
+typedef Clock::time_point ClockTime;
 
 double karatsuba(double num1, double num2) {
 	int num1Length = to_string((int)num1).size();
@@ -37,9 +42,18 @@ int main() {
 	double num2;
 	cin >> num2;
 
+	ClockTime karatsubaBegin, karatsubaEnd;
+	karatsubaBegin = Clock::now();
 	double karatsubaResult = karatsuba(num1, num2);
-	double quadraticResult = num1 * num2;
+	karatsubaEnd = Clock::now();
+	double karatsubaTime = duration_cast<nanoseconds>(karatsubaEnd - karatsubaBegin).count();
 
-	cout << endl << "Quadratic Result: " + to_string(quadraticResult) << endl;
-	cout << "Karatsuba Result: " + to_string(karatsubaResult);
+	ClockTime quadraticBegin, quadraticEnd;
+	quadraticBegin = Clock::now();
+	double quadraticResult = num1 * num2;
+	quadraticEnd = Clock::now();
+	double quadraticTime = duration_cast<nanoseconds>(quadraticEnd - quadraticBegin).count();
+
+	cout << endl << "Quadratic Result: " << quadraticResult << " (" << quadraticTime << "ns)" << endl;
+	cout << "Karatsuba Result: " << karatsubaResult << " (" << karatsubaTime << "ns)";
 }
