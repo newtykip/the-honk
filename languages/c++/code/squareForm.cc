@@ -12,8 +12,8 @@ double power(double base, double exponent) {
 
 // Euclid algorithm
 int greatestCommonDivisor(int a, int b) {
-    int currentA = a;
-    int currentB = b;
+    int currentA = abs(a);
+    int currentB = abs(b);
     bool divisorFound = false;
 
     while (currentA != currentB) {
@@ -45,7 +45,7 @@ std::string formatFraction(int numerator, int denominator) {
 
 // Format a double by cutting off as many trailing zeros as possible
 std::string formatDouble(double input) {
-    std::string output = std::to_string(input);
+    std::string output = std::to_string(abs(input));
     int pointIndex = output.find_last_of('.');
     int firstZeroIndex = output.find_last_not_of('0') + 1;
 
@@ -87,6 +87,21 @@ std::string completeTheSquare(double a, double b, double c) {
     return output;
 }
 
+int promptForInteger(std::string letter) {
+    std::cout << "Please input a value for " + letter + ": ";
+    
+    int input;
+    std::cin >> input;
+
+    return input;
+}
+
 int main() {
-    std::cout << completeTheSquare(1, 2, 5);
+    std::cout << "ax² + b^x + c^x -> a(x + p) + q\n";
+
+    int a = promptForInteger("a");
+    int b = promptForInteger("b");
+    int c = promptForInteger("c");
+
+    std::cout << completeTheSquare(a, b, c);
 }
