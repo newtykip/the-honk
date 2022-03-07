@@ -14,7 +14,6 @@ double power(double base, double exponent) {
 int greatestCommonDivisor(int a, int b) {
     int currentA = abs(a);
     int currentB = abs(b);
-    bool divisorFound = false;
 
     while (currentA != currentB) {
         if (currentA > currentB) {
@@ -97,7 +96,7 @@ int promptForInteger(std::string letter) {
 }
 
 int main() {
-    std::cout << "ax² + b^x + c^x -> a(x + p) + q\n";
+    std::cout << "ax² + bx + c -> a(x + p)² + q\n";
 
     int a = promptForInteger("a");
     int b = promptForInteger("b");
