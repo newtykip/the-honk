@@ -33,7 +33,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [19 - Counting Sundays](src/19%20-%20Counting%20Sundays.ts)
 -   [x] [20 - Factorial digit sum](src/20%20-%20Factorial%20digit%20sum.ts)
 -   [x] [21 - Amicable numbers](src/21%20-%20Amicable%20numbers.ts)
--   [ ] 22 - Names scores
+-   [x] [22 - Names scores](src/22%20-%20Names%20scores.ts)
 -   [ ] 23 - Non-abundant sums
 -   [ ] 24 - Lexicographic permutations
 -   [ ] 25 - 1000-digit Fibonacci number
