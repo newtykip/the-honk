@@ -44,17 +44,9 @@ std::string formatFraction(int numerator, int denominator) {
 
 // Format a double by cutting off as many trailing zeros as possible
 std::string formatDouble(double input) {
-    std::string output = std::to_string(abs(input));
-    int pointIndex = output.find_last_of('.');
-    int firstZeroIndex = output.find_last_not_of('0') + 1;
-
-    if (firstZeroIndex - 1 == pointIndex) {
-        output.erase(firstZeroIndex - 1, std::string::npos);
-    } else {
-        output.erase(firstZeroIndex, std::string::npos);
-    }
-
-    return output;
+    std::string str = std::to_string(input);
+	str.erase(str.find_last_not_of('0') + 1, std::string::npos);
+	return str;
 }
 
 // ax² + b^x + c^x -> a(x + p) + q
