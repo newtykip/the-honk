@@ -8,4 +8,4 @@ def chunkArray(array, chunkCount):
 	
 	return chunks
 
-print(chunkArray([1,2,3,4,5,6], 3))
+print(chunkArray([1,2,3,4,5,6], 4))
