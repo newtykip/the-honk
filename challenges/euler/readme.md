@@ -41,7 +41,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [ ] 27 - Quadratic primes
 -   [x] [28 - Number spiral diagonals](src/28%20-%20Number%20spiral%20diagonals.ts)
 -   [ ] 29 - Distinct powers
--   [ ] 30 - Digit fifth powers
+-   [x] [30 - Digit fifth powers](src/30%20-%20Digit%20fifth%20powers.ts)
 -   [ ] 31 - Coin sums
 -   [ ] 32 - Pandigital products
 -   [ ] 33 - Digit cancelling fractions
