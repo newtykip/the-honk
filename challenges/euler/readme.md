@@ -59,7 +59,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [ ] 45 - Triangular, pentagonal, and hexagonal
 -   [ ] 46 - Goldbach's other conjecture
 -   [ ] 47 - Distinct primes factors
--   [ ] 48 - Self powers
+-   [x] [48 - Self powers](src/48%20-%20Self%20powers.ts)
 -   [ ] 49 - Prime permutations
 -   [ ] 50 - Consecutive prime sum
 -   [ ] 51 - Prime digit replacements
