@@ -35,7 +35,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [21 - Amicable numbers](src/21%20-%20Amicable%20numbers.ts)
 -   [x] [22 - Names scores](src/22%20-%20Names%20scores.ts)
 -   [ ] 23 - Non-abundant sums
--   [ ] 24 - Lexicographic permutations
+-   [x] [24 - Lexicographic permutations](src/24%20-%20Lexicographic%20permutations.ts)
 -   [x] [25 - 1000-digit Fibonacci number](src/25%20-%201000-digit%20Fibonacci%20number.ts)
 -   [ ] 26 - Reciprocal cycles
 -   [ ] 27 - Quadratic primes
