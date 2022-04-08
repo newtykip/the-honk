@@ -39,7 +39,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [25 - 1000-digit Fibonacci number](src/25%20-%201000-digit%20Fibonacci%20number.ts)
 -   [ ] 26 - Reciprocal cycles
 -   [ ] 27 - Quadratic primes
--   [ ] 28 - Number spiral diagonals
+-   [x] [28 - Number spiral diagonals](src/28%20-%20Number%20spiral%20diagonals.ts)
 -   [ ] 29 - Distinct powers
 -   [ ] 30 - Digit fifth powers
 -   [ ] 31 - Coin sums
