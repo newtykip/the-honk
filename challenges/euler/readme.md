@@ -36,7 +36,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [22 - Names scores](src/22%20-%20Names%20scores.ts)
 -   [ ] 23 - Non-abundant sums
 -   [ ] 24 - Lexicographic permutations
--   [ ] 25 - 1000-digit Fibonacci number
+-   [x] [25 - 1000-digit Fibonacci number](src/25%20-%201000-digit%20Fibonacci%20number.ts)
 -   [ ] 26 - Reciprocal cycles
 -   [ ] 27 - Quadratic primes
 -   [ ] 28 - Number spiral diagonals
