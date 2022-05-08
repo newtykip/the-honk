@@ -18,7 +18,7 @@ arcsin = lambda x: (-i * ln((i * x) + sqrt(1 - pow(x, 2)))).real
 # todo: finish arc functions
 arccos = lambda x: None
 arctan = lambda x: None
-arccsc = lambda x: None
+arccsc = lambda x: (-i * (ln((pow(x, -1) * i) + sqrt(1 - pow(x, -2))))).real
 arcsec = lambda x: None
 arccot = lambda x: None
 
