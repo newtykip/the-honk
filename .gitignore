@@ -19,3 +19,7 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 bin
+ignored
+
+maths/*.pdf
+maths/*.synctex.gz

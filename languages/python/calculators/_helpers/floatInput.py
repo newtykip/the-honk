@@ -5,4 +5,4 @@ def floatInput(text):
 			x = float(input(text))
 			return x
 		except ValueError:
-			print('You must input a float integer!\n')
+			print('You must input a float!\n')

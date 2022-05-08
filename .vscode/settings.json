@@ -1,5 +1,4 @@
 {
-    "java.project.sourcePaths": ["java"],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -34,5 +33,8 @@
         "ostream": "cpp",
         "ratio": "cpp",
         "streambuf": "cpp"
-    }
+    },
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.search.rootFiles.include": ["**/*.tex", "root.tex"]
 }
