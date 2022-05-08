@@ -3,3 +3,4 @@
 
 npx pretty-quick --staged
 node .husky/scripts/cleanMaths.js
+git add .

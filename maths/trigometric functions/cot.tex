@@ -1,0 +1,29 @@
+\documentclass{../style}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\euler
+
+\begin{gather*}
+	\therefore \sin(\theta) = \frac{e^{i\theta} - e^{-i\theta}}{2i} \\
+	\cos(\theta) = \frac{e^{i\theta} + e^{-i\theta}}{2} \\
+	\tan(\theta) = \frac{\sin(\theta)}{\cos{\theta}} = -\frac{i(-1 + e^{2i\theta})}{1 + e^{2i\theta}} \\
+	\cot(\theta) = \frac{1}{\tan(\theta)} = -\frac{1 + e^{2i\theta}}{i(-1 + e^{2i\theta})}
+\end{gather*}
+
+\begin{gather*}
+	\text{let} \quad \cot(\theta) = x \\
+	x(i + ie^{2i\theta}) = -1(1 + e^{2i\theta}) \\
+	ix + ixe^{2i\theta} = -e^{2i\theta} - 1 \\
+	ixe^{2i\theta} + e^{2i\theta} = -1 - ix \\
+	(ix + 1)e^{2i\theta} = -1 - ix \\
+	e^{2i\theta} = -\frac{1 - ix}{1 + ix} \\
+	2i\theta = \ln(\frac{x + i}{x - i}) \\
+	i\theta = \frac{1}{2}\ln(\frac{x + i}{x - i}) \\
+	\theta = -\frac{i}{2}\ln(\frac{x + i}{x - i})
+\end{gather*}
+
+\begin{gather*}
+	\therefore \text{arccot}(\theta) = -\frac{i}{2}\ln(\frac{\theta + i}{\theta - i})
+\end{gather*}
+\end{document}
