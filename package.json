@@ -1,7 +1,8 @@
 {
     "name": "the-honk",
     "scripts": {
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "maths": "node .husky/scripts/cleanMaths.js"
     },
     "devDependencies": {
         "@types/node": "^17.0.6",

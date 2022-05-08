@@ -27,32 +27,47 @@ const cropBuffer = buffer =>
             .catch(err => reject(err));
     });
 
-fs.readdirSync(mathsDir).forEach(file => {
-    const [fileName, fileExtension] = file.split('.');
-    const filePath = path.join(mathsDir, file);
+const crawlDirectory = async dir => {
+    const dirents = fs.readdirSync(dir, { withFileTypes: true });
 
-    if (file.endsWith('.pdf')) {
-        pdfToPng(filePath, {
-            viewportScale: 2
-        }).then(async output => {
-            const pageCount = output.length;
+    const files = await Promise.all(
+        dirents.map(dirent => {
+            const res = path.resolve(dir, dirent.name);
+            return dirent.isDirectory() ? crawlDirectory(res) : res;
+        })
+    );
 
-            if (pageCount > 1)
-                output.forEach(async (page, i) =>
+    return files.flat();
+};
+
+(async () => {
+    const files = await crawlDirectory(mathsDir);
+
+    files.forEach(file => {
+        const [filePath, fileDirectory, fileNameWithExt] = file.match(/(.*)\/((?:.(?!\/))+)$/);
+        const [fileName, fileExtension] = fileNameWithExt.split('.');
+
+        if (file.endsWith('.pdf')) {
+            pdfToPng(filePath).then(async output => {
+                const pageCount = output.length;
+
+                if (pageCount > 1)
+                    output.forEach(async (page, i) =>
+                        fs.writeFileSync(
+                            path.join(fileDirectory, `${fileName}-${i + 1}.png`),
+                            await cropBuffer(page.content)
+                        )
+                    );
+                else
                     fs.writeFileSync(
-                        path.join(mathsDir, `${fileName}-${i + 1}.png`),
-                        await cropBuffer(page.content)
-                    )
-                );
-            else
-                fs.writeFileSync(
-                    path.join(mathsDir, `${fileName}.png`),
-                    await cropBuffer(output[0].content)
-                );
-        });
-    }
+                        path.join(fileDirectory, `${fileName}.png`),
+                        await cropBuffer(output[0].content)
+                    );
+            });
+        }
 
-    if (fileExtension !== 'tex' && fileExtension !== 'png' && fileExtension !== 'cls') {
-        fs.rmSync(filePath);
-    }
-});
+        if (fileExtension !== 'tex' && fileExtension !== 'png' && fileExtension !== 'cls') {
+            fs.rmSync(filePath);
+        }
+    });
+})();
