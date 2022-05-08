@@ -2,11 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \begin{document}
-\begin{gather*}
-	\text{By Euler's formula:} \\
-	e^{i\theta} = cos(\theta) + i\sin(\theta) \\
-	e^{-i\theta} = cos(\theta) - i\sin(\theta)
-\end{gather*}
+\euler
 
 \begin{gather*}
 	\therefore \sin(\theta) = \frac{e^{i\theta} - e^{-i\theta}}{2i}
@@ -15,12 +11,12 @@
 \begin{gather*}
 	\text{let} \quad \sin(\theta) = x \\
 	2ix = e^{i\theta} - e^{-i\theta} \\
-	2ie^{i\theta}x = (e^{i\theta})^2 - 1 \\ 
+	2ixe^{i\theta} = (e^{i\theta})^2 - 1 \\ 
 	(e^{i\theta})^2 + (-2ix)e^{i\theta} - 1 = 0
 \end{gather*}
 
 \begin{gather*}
-	e^{i\theta} = \frac{-(-2ix) \pm \sqrt{(-2ix)^2 - 4(1)(-1)}}{2} = ix \pm \sqrt{1 - x^2} \\
+	e^{i\theta} = \frac{-(-2ix) \pm \sqrt{(-2ix)^2 - 4(-1)}}{2} = ix \pm \sqrt{1 - x^2} \\
 	i\theta = \ln(ix \pm \sqrt{1 - x^2}) \\
 	\theta = -i\ln(ix \pm \sqrt{1 - x^2})
 \end{gather*}
