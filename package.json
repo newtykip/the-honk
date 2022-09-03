@@ -1,16 +1,13 @@
 {
     "name": "the-honk",
     "scripts": {
-        "prepare": "husky install",
-        "maths": "node .husky/scripts/cleanMaths.js"
+        "prepare": "husky install"
     },
     "devDependencies": {
         "@types/node": "^17.0.6",
         "commitizen": "^4.2.4",
         "cz-conventional-changelog": "^3.3.0",
         "husky": "^7.0.4",
-        "jimp": "^0.16.1",
-        "pdf-to-png-converter": "^1.0.0",
         "prettier": "^2.5.1",
         "pretty-quick": "^3.1.3"
     }

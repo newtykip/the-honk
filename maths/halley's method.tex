@@ -1,0 +1,53 @@
+\documentclass{style}
+\usepackage{amsmath}
+\usepackage{breqn}
+\usepackage{mathtools}
+
+\begin{document}
+\begin{center}
+	Suppose we have an $n$th degree polynomial, such that $f(x) = c_{n}x^{n} + c_{n-1}x^{n-1} + c_{n-2}x^{n-2} + ... + c_{0} = \sum_{i=0}^{n}c_{n-i}x^{n-i}$
+
+	\hfill
+
+	By the power rule of differentiation, we can conclude that the first derivative of $f(x)$ is as follows
+
+	\begin{dmath*}
+		f'(x) = nc_{n}x^{n-1} + (n-1)c_{n-1}x^{n-2} + (n-2)c_{n-2}x^{n-3} + ... + c_{1} = \sum_{i=0}^{n-1}(n-i)c_{n-i}x^{n-i-1}
+	\end{dmath*}
+
+	And the second derivative is
+
+	\begin{dmath*}
+		f''(x) = n(n-1)c_{n}x^{n-2} + (n-1)(n-2)c_{n-1}x^{n-3} + (n-2)(n-3)c_{n-2}x^{n-4} + ...+ c_{2} = \sum_{i=0}^{n-2}(i-n)(i-n+1)a_{n-i}x^{n-i-2}
+	\end{dmath*}
+
+	After starting with an initial guess, the next iteration of Halley's method is given by $x_k - \frac{2f(x_k)f'(x_k)}{2[f'(x_k)]^2 - f(x_k)f''(x_k)}$.
+	
+	This means that we must first find $f(x)f'(x)$, $[f'(x)]^2$, and $f(x)f''(x)$. These all consist of the multiplication of two series - there is a nice general form to this problem stated below
+
+	\begin{dmath*}
+		(\sum_{i=0}^{n}x_{i})(\sum_{j=0}^{m}y_{j}) = \sum_{i=0}^{n}\sum_{j=0}^{m}x_iy_j
+	\end{dmath*}
+
+	\newpage
+	From this, we can conclude that:
+
+	\begin{dmath*}
+		f(x)f'(x) = (\sum_{i=0}^{n}c_{n-i}x^{n-i})(\sum_{i=0}^{n-1}(n-i)c_{n-i}x^{n-i-1}) = \sum_{i=0}^{n}\sum_{j=0}^{n-1}(n-j)c_{n-i}c_{n-j}x^{2n-i-j-1}
+	\end{dmath*}
+
+	\begin{dmath*}
+		[f'(x)]^2 = (\sum_{i=0}^{n-1}(n-i)c_{n-i}x^{n-i-1})(\sum_{i=0}^{n-1}(n-i)c_{n-i}x^{n-i-1}) = \sum_{i=0}^{n-1}\sum_{j=0}^{n-1}(n-i)(n-j)c_{n-i}c_{n-j}x^{2(n-1)-i-j}
+	\end{dmath*}
+
+	\begin{dmath*}
+		f(x)f''(x) = (\sum_{i=0}^{n}c_{n-i}x^{n-i})(\sum_{i=0}^{n-2}(i-n)(i-n+1)a_{n-i}x^{n-i-2}) = \sum_{i=0}^{n}\sum_{j=0}^{n-2}(j-n)(j-n+1)c_{n-i}c_{n-j}x^{2(n-1)-i-j}
+	\end{dmath*}
+
+	And all that is left to do is to plug it into the formula for Halley's method, leaving us with the following:
+
+	\begin{align*}
+		x_{k+1} = x_{k} - \dfrac{2\sum_{i=0}^{n}\sum_{j=0}^{n-1}(n-j)c_{n-i}c_{n-j}x^{2n-i-j-1}}{\splitdfrac{2\sum_{i=0}^{n-1}\sum_{j=0}^{n-1}(n-i)(n-j)c_{n-i}c_{n-j}x^{2(n-1)-i-j}}{- \sum_{i=0}^{n}\sum_{j=0}^{n-2}(j-n)(j-n+1)c_{n-i}c_{n-j}x^{2(n-1)-i-j}}}
+	\end{align*}
+\end{center}
+\end{document}
