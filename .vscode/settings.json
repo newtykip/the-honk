@@ -12,7 +12,6 @@
         "commitlint.config.js": true,
         "**/pnpm-lock.yaml": true
     },
-    "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
         "*.tcc": "cpp",
         "complex": "cpp",
@@ -33,7 +32,5 @@
         "ostream": "cpp",
         "ratio": "cpp",
         "streambuf": "cpp"
-    },
-    "latex-workshop.latex.autoBuild.run": "onSave",
-    "latex-workshop.latex.autoClean.run": "onBuilt"
+    }
 }
