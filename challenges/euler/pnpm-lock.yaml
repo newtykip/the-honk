@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
     '@swc/core': ^1.2.125
@@ -25,7 +25,7 @@ devDependencies:
     inquirer: 8.2.0
     ms: 2.1.3
     regenerator-runtime: 0.13.9
-    ts-node: 10.4.0_626351e049b80b142acb2ce48a7f5656
+    ts-node: 10.4.0_mjrvdycjxafrikwlftsiu72wky
     typescript: 4.4.4
 
 packages:
@@ -943,7 +943,7 @@ packages:
             os-tmpdir: 1.0.2
         dev: true
 
-    /ts-node/10.4.0_626351e049b80b142acb2ce48a7f5656:
+    /ts-node/10.4.0_mjrvdycjxafrikwlftsiu72wky:
         resolution:
             {
                 integrity: sha512-g0FlPvvCXSIO1JDF6S232P5jPYqBkRL9qly81ZgAOSU7rwI0stphCgd2kLiCrU9DjQCrJMWEqcNSjQL02s6d8A==
