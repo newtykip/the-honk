@@ -1,0 +1,1 @@
+l,s,m,r,i,z,c,n=len,sum,map,range,int,-1,lambda b:s(m(lambda x:-x[1] if x[0]==0 else x[1],[(k,i(b[k])*2**(l(b)-k-1)) for k in r(l(b)-1,-1,-1)])),lambda b:(f:=b[-l(b)+1:],(s([i(f[k-1])/2**k for k in r(l(f),0,z)]))+(z if i(b[0])==1 else 0))[1]
