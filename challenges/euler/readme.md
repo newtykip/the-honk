@@ -53,7 +53,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [ ] 39 - Integer right triangles
 -   [ ] 40 - Champernowne's constant
 -   [ ] 41 - Pandigital prime
--   [ ] 42 - Coded triangle numbers
+-   [x] [42 - Coded triangle numbers](src/42%20-%20Coded%20triangle%20numbers.ts)
 -   [ ] 43 - Sub-string divisibility
 -   [ ] 44 - Pentagon numbers
 -   [ ] 45 - Triangular, pentagonal, and hexagonal
