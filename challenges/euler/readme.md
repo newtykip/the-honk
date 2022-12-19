@@ -37,7 +37,7 @@ The source code can be found in the [src](src) directory. My thoughts about some
 -   [x] [23 - Non-abundant sums](src/23%20-%20Non-abundant%20sums.ts)
 -   [x] [24 - Lexicographic permutations](src/24%20-%20Lexicographic%20permutations.ts)
 -   [x] [25 - 1000-digit Fibonacci number](src/25%20-%201000-digit%20Fibonacci%20number.ts)
--   [ ] 26 - Reciprocal cycles
+-   [x] [26 - Reciprocal cycles](src/26%20-%20Reciprocal%20cycles.ts)
 -   [ ] 27 - Quadratic primes
 -   [x] [28 - Number spiral diagonals](src/28%20-%20Number%20spiral%20diagonals.ts)
 -   [ ] 29 - Distinct powers
