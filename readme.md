@@ -11,9 +11,8 @@ There is a lot of maths in here, be warned.
 
 ### Table of contents
 
--   [Python](languages/python)
--   [C++](languages/c++)
--   [Project Euler](challenges/euler)
--   [r/dailyprogrammer](challenges/daily-programmer)
+-   [Python](python)
+-   [C++](c++)
 -   [GCSE Computer Science](school/gcse)
+-   [A-Level Computer Science](school/a-level)
 -   [Royal Institute Computer Science Masterclass 2021](school/royal%20institute)
