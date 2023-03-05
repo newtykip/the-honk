@@ -21,5 +21,7 @@ _deps
 bin
 ignored
 
-maths/**/*.pdf
-maths/**/*.synctex.gz
+*.docx
+*.pptx
+*.doc
+*.pdf

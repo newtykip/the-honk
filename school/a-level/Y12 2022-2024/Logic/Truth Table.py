@@ -82,10 +82,13 @@ print('-' * (len(header) - 15 - (8 * inputQuantity)))
 # Find the cartesian product to generate pairs
 # https://en.wikipedia.org/wiki/Cartesian_product
 sets = [(0, 1)] * inputQuantity
+print(sets)
 pairs = [[]]
 
 for set in sets:
     pairs = [x+[y] for x in pairs for y in set]
+
+print(pairs)
 
 for i, pair in enumerate(pairs):
     print(formatString.format(red(i + 1), *pair, bold(applyGate(*pair))))

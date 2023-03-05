@@ -1,5 +1,6 @@
 from time import sleep
 
+# :eyes:
 def clearTerminal():
     print('\n' * 25)
 
@@ -26,25 +27,27 @@ def findPrimes(upperBound: int):
 
     return primes
 
-possiblePrimes = findPrimes(1_000_000)
+POSSIBLE_PRIMES = findPrimes(1_000_000) # Would be better to hardcode this list as it is constant, however I want good marks and to show complex algorithms I guess!!!
 inputtedPrimes = []
 
-def askForPrime():
-    global possiblePrimes, inputtedPrimes
-
+def getPrime(primeList):
     while True:
         try:
             value = int(input("Please enter a prime number to add to the list: "))
 
+            # Ensure that the value fits the requirements set out by the brief
             if value > 999_999 or value < 0:
                 raise ValueError('Please ensure you enter an integer at most 6 digits long!')
-            elif value not in possiblePrimes:
+            elif value not in POSSIBLE_PRIMES:
                 raise ValueError('That is not a prime number! Please try again.')
-            elif value in inputtedPrimes:
+            elif value in primeList:
                 raise ValueError('You have already inputted that prime number! Please enter a different one.')
 
-            return inputtedPrimes.append(value)
+            # Mutate the prime list and return it back to the caller
+            primeList.append(value)
+            return primeList
         except ValueError as e:
+            # Check to see if the error was raised by Python or manually, and print messages accordingly
             if e.args[0].startswith("invalid literal"):
                 print('Please enter a valid integer!')
             else:
@@ -69,14 +72,19 @@ What would you like to do?
 
                 break
             except ValueError:
-                print("Please enter a valid integer that is at most six digits long.")
+                print("Please enter a valid option from the list (1-3)")
 
         clearTerminal()
 
         if choice == 1:
-            askForPrime()
+            inputtedPrimes = getPrime(inputtedPrimes)
         elif choice == 2:
-            print(', '.join(map(lambda x: str(x), inputtedPrimes)))
+            # Only print the list if there is values inside to print
+            if len(inputtedPrimes) > 0:
+                print(', '.join(map(lambda x: str(x), inputtedPrimes)))
+            else:
+                print('There is currently nothing in the list!')
+                
             sleep(2.5)
         elif choice == 3:
             exit()
