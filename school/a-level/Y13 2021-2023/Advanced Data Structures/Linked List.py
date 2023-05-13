@@ -192,7 +192,7 @@ class LinkedList(Generic[T]):
 
         return out + "]"
 
-names = LinkedList[str](["Harold", "Janet"])
+names = LinkedList[str](["John Doe", "Jane Doe"])
 names.extend(["Alfred", "Sophie"]).insert(1, "John Snow")
 names.remove("Alfred")
 names += "Woody"

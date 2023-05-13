@@ -27,12 +27,13 @@ class CashRegister:
 
         for coinType in self.__coins:
             # Set an initial value for the change
-            if changeValue - coinType > 0:
+            if changeValue - coinType >= 0:
                 change[coinType] = 0
 
             # Keep attempting to provide change from the tray until we overpay
-            while changeValue - coinType > 0:
+            while changeValue - coinType >= 0:
                 changeValue -= coinType
+                changeValue = round(changeValue, 2)
                 self.__coins[coinType] -= 1
                 change[coinType] += 1
             
