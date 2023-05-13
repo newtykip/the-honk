@@ -1,4 +1,4 @@
-# Operating Systems
+#  Operating Systems
 
 ## The Kernel
 
@@ -34,8 +34,8 @@ The process manager is a part of the kernel. Jobs can consist of many processes 
 
 ### Process States
 
--   HOLD
--   READY
--   RUNNING
--   WAIT
--   FINISHED/FAIL
+- HOLD
+- READY
+- RUNNING
+- WAIT
+- FINISHED/FAIL
