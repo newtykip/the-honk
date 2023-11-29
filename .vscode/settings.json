@@ -5,32 +5,6 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "node_modules": true,
-        "challenges/euler/node_modules": true,
-        "challenges/euler/build": true,
-        "commitlint.config.js": true,
-        "**/pnpm-lock.yaml": true
-    },
-    "files.associations": {
-        "*.tcc": "cpp",
-        "complex": "cpp",
-        "fstream": "cpp",
-        "cmath": "cpp",
-        "functional": "cpp",
-        "tuple": "cpp",
-        "type_traits": "cpp",
-        "string_view": "cpp",
-        "vector": "cpp",
-        "algorithm": "cpp",
-        "memory": "cpp",
-        "random": "cpp",
-        "iosfwd": "cpp",
-        "iostream": "cpp",
-        "istream": "cpp",
-        "numeric": "cpp",
-        "ostream": "cpp",
-        "ratio": "cpp",
-        "streambuf": "cpp"
+        "**/Thumbs.db": true
     }
 }
