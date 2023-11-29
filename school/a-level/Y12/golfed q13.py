@@ -1,0 +1,1 @@
+from random import choice as c;z=len,r=lambda d:c("".join(d.split("/"))),u=lambda f,l,d:(s:=d.split("/"),a:=z(l),b:=z(s[2]),f"{f[0:3]}{r(d)}{r(d)}{l[a-3:a]}{s[0]}{s[1]}{s[2][b-2:b]}")[3]

@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url(Quicksand-VariableFont_wght.ttf);
+}
+
+body {
+    text-align: center;
+    font-family: "Quicksand";
+    user-select: none;
+    list-style-position: inside;
+}

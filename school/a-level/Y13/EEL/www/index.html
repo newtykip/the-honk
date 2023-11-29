@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit Converter</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="eel.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <h1>Let's convert!</h1>
+    <h2>Enter your query below...</h2>
+
+    <h4>Please note that it must be in one of the following forms</h4>
+
+    <ul>
+        <li><strong>quantity</strong> <strong>base unit</strong> to <strong>target unit</strong></li>
+        <li>fuel to travel <strong>quantity</strong> miles</li>
+        <li>surface area of field with diameter <strong>value</strong></li>
+    </ul>
+
+    <p>
+        <input type="text" id="box">
+        <button onclick="submit()">Send</button>
+    </p>
+
+    <p id="response"></p>
+
+    <button onclick="save()">Save current response to file</button>
+    <p id="save_result"></p>
+</body>
+</html>

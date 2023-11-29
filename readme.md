@@ -1,11 +1,13 @@
 <div align="center">
-    <img height="256" src="assets/readme.gif" alt="">
+    <img height="256" src="readme.gif" alt="">
     <h1>the honk</h1>
 </div>
 
 > Big code dump. BTEC [The Bonk](https://github.com/GD-NTB/the-bonk). Anything that does not deserve its own repository goes here.
 
-I do not promise everything will work in here, however if you have any questions about the contents of the honk, don't be scared to [reach out to me on Discord (:](https://discord.gg/brEhN5Y7YK)
+Last updated: 29/11/2023
+
+I do not promise everything will work in here, however if you have any questions about the contents of the honk, don't be scared to [reach out to me on Discord (:](https://discord.gg/62kNFYBvKB)
 
 There is a lot of maths in here, be warned.
 
